@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>amfavour</title>
+  </head>
+  <style>
+    body {
+      background-color: #251101;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 8em;
+    }
+    fig {
+      color: red;
+    }
+  </style>
+  <body>
+    <h1>
+      <fig>&#10084;</fig>
+      <span id="text"></span>
+      <fig>&#10084;</fig>
+    </h1>
+    <script>
+      const text = document.getElementById("text");
+      let i = 0;
+      const arr = ["I am favour", "i am always happy", "sorry for all haters"];
+      setInterval(() => {
+        text.innerHTML = arr[i];
+        if (i >= arr.length - 1) {
+          i = 0;
+        } else {
+          i++;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
